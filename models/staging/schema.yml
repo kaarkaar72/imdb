@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: staging
+    database: "{{ env_var('DBT_DATABASE', 'imdb-511') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'imdb_db') }}"
+    
+    tables:
+      - name: title_ratings
+      - name: title_basics
+      - name: name_basics
+      - name: title_crew
+      - name: title_principals
+
+models:
+  - name: stg_title_ratings
+  - name: stg_title_basics
+  - name: stg_name_basics
+  - name: stg_title_crew
+  - name: stg_title_principals
