@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: dim_zones
+  - name: fact_title_ratings
