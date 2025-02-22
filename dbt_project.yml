@@ -39,4 +39,6 @@ models:
   imdb:
     # Applies to all files under models/example/
     staging:
-      +materialized: view
+      materialized: view
+    core:
+      materialized: table
