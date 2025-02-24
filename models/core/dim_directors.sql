@@ -7,7 +7,7 @@
 WITH director_ids AS (
   SELECT DISTINCT
     TRIM(director) AS director_id
-  FROM `imdb-511.imdb_db_511.stg_title_crew`,
+  FROM {{ref('stg_title_crew')}},
   UNNEST(directors) AS director
   WHERE director IS NOT NULL
 ),
@@ -18,7 +18,7 @@ directors AS (
     birth_year,
     death_year,
     primary_profession
-  FROM `imdb-511.imdb_db_511.stg_name_basics`
+  FROM {{ref('stg_name_basics')}}
   WHERE EXISTS (
     SELECT 1
     FROM UNNEST(primary_profession) AS profession
