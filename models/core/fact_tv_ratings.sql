@@ -21,7 +21,7 @@ SELECT
   t.runtime_minutes as runtime_minutes
   -- Add additional metrics here (e.g., box office revenue if available)
 FROM
-  titles` t
+  titles t
 LEFT JOIN
   ratings r
 ON
