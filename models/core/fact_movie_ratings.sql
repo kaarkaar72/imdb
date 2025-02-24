@@ -20,9 +20,9 @@ SELECT
   r.num_votes AS num_votes,
   t.runtime_minutes AS runtime_minutes,
 FROM
-  `imdb-511.imdb_db_511.stg_title_basics` t
+  titles t
 LEFT JOIN
-  `imdb-511.imdb_db_511.stg_title_ratings` r
+  ratings r
 ON
   t.title_id = r.title_id
 WHERE

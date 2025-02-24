@@ -21,9 +21,9 @@ SELECT
   t.runtime_minutes as runtime_minutes
   -- Add additional metrics here (e.g., box office revenue if available)
 FROM
-  `imdb-511.imdb_db_511.stg_title_basics` t
+  titles` t
 LEFT JOIN
-  `imdb-511.imdb_db_511.stg_title_ratings` r
+  ratings r
 ON
   t.title_id = r.title_id
 WHERE
