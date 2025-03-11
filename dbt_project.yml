@@ -39,7 +39,10 @@ models:
   imdb:
     # Applies to all files under models/example/
     staging:
+      +schema: imdb_db
       materialized: view
     core:
       materialized: table
+      +schema: imdb_db
+
       

@@ -1,12 +1,13 @@
 {{
     config(
-        materialized='table'
+        materialized='table',
+        schema='imdb_db'
     )
 }}
 
 with titles as (
     select *
-    from {{ ref('stg_title_basics') }}
+     FROM {{ ref('stg_title_basics')}}
 ),
 ratings as (
     select *

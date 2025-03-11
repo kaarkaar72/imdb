@@ -3,6 +3,8 @@ version: 2
 models:
   - name: fact_tv_ratings
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: movie_id
         data_type: string
@@ -22,6 +24,8 @@ models:
 
   - name: fact_movie_ratings
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: movie_id
         data_type: string
@@ -41,6 +45,8 @@ models:
 
   - name: dim_writers
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: writer_id
         data_type: string
@@ -64,6 +70,8 @@ models:
 
   - name: dim_genres
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: genre_id
         data_type: int64
@@ -75,6 +83,8 @@ models:
 
   - name: dim_directors
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: director_id
         data_type: string
@@ -98,6 +108,8 @@ models:
 
   - name: dim_actors
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: name_id
         data_type: string
@@ -121,6 +133,8 @@ models:
         
   - name: bridge_title_actors
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: title_id
         data_type: string
@@ -136,6 +150,8 @@ models:
 
   - name: bridge_title_directors
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: title_id
         data_type: string
@@ -147,6 +163,8 @@ models:
 
   - name: bridge_title_writers
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: title_id
         data_type: string
@@ -158,6 +176,8 @@ models:
 
   - name: bridge_title_genres
     description: ""
+    config:
+      schema: imdb_db
     columns:
       - name: title_id
         data_type: string
